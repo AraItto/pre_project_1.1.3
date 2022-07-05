@@ -16,9 +16,9 @@ public class Util {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(URL,USER,PASSWORD);
             connection.setAutoCommit(false);
-            return connection;
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.getMessage();
         }
+        return connection;
     }
 }
